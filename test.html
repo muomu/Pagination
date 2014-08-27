@@ -1,0 +1,20 @@
+<!DOCTYPE Html>
+<html>
+<head>
+	<script type="text/javascript" src="pagination.js"></script>
+	<script type="text/javascript" src="pagination.pss.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			p = new Pagination($("pag"))
+			p.delegate()
+			p.bind("http://www.baidu.com")
+			p.requestText = "s?wd=%@"
+			p.token(1)
+		})
+	</script>
+	<link rel="stylesheet" href="pagination.css">
+</head>
+<body>
+	<div id="pag"></div>
+</body>
+</html>
