@@ -27,7 +27,7 @@
 			}
 			
 			if(arg1.constructor == Function){
-				onload = arg1
+				self.onload = arg1
 				return
 			}
 			
@@ -85,6 +85,7 @@
 				_http.open(t_pam, url, true)
 				header && eval(sform("_http.setRequestHeader(%@)",header))
 				_http.onreadystatechange = aevs
+				//_http.setRequestHeader("Content-type","application/x-www-form-urlencoded")
 				return 0
 			}
 			catch (e) {
@@ -95,9 +96,7 @@
 		var aevs = function() {
 			try {
 				if (_http.readyState == 4 && _http.status == 200) {
-					//_hash("onbegin") && _hdl.onbegin.call(_m, _http.responseText)
-					!!!"debuging";
-					_hash("onbegin") && _hdl.onbegin.call(_m, "[{lp:\"<font color='red'>Anye</font>\",lo:'24'},{lp:'muomu',lo:'2'}]")
+					_hash("onbegin") && _hdl.onbegin.call(_m, _http.responseText)
 				}
 			}
 			catch (e) {
@@ -150,7 +149,7 @@
 				_err = "not url"
 				return -1
 			}
-			var ca = creajax(aart, (method || "POST"), url, 0)
+			var ca = creajax(aart, (method || "GET"), url, 0)
 			return ca
 		}
 		this.toString = function() {
@@ -186,7 +185,6 @@
 			}
 			catch (e) {
 				console.warn(e)
-				return
 			}
 		}
 	}
