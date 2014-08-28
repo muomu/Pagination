@@ -1,20 +1,23 @@
 <!DOCTYPE Html>
 <html>
 <head>
-	<script type="text/javascript" src="pagination.js"></script>
-	<script type="text/javascript" src="pagination.pss.js"></script>
+	<script type="text/javascript" src="pagination2.0.js"></script>
 	<script type="text/javascript">
 		$(function(){
-			p = new Pagination($("pag"))
-			p.delegate()
-			p.bind("")
-			p.requestText = "s?wd=%@"
-			p.token(1)
+			d = new Docket(_pstyleson)
+			d.alloc = $("docket")
+			p = new Pagination()
+			p.delegate(d)
+			p.requestText = "p=%@"
+			p.view = $("pag")
+			p.init("http:/www.baidu.com")
+			perror()
 		})
 	</script>
 	<link rel="stylesheet" href="pagination.css">
 </head>
 <body>
 	<div id="pag"></div>
+	<div id="docket"></div>
 </body>
 </html>

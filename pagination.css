@@ -1,21 +1,40 @@
+* {
+	box-sizeing:border-box
+}
+
+body {
+	-webkit-user-select:none;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+	overflow: hidden
+}
 #pag 
 {
 	width: 300px
 }
-.tagline 
-{
-	border-bottom: 1px solid black;
-}
-.lo
-{
-	display: inline-block;
-	border-left: 1px solid black;
-	text-align: center;
-	width: 49%
-}
-.lp
+.dock
 {
 	display: inline-block;
 	text-align: center;
-	width: 49%
+	border: 1px solid black;
+	cursor:pointer;
+}
+.arror-items
+{
+	width: 23px;
+	height:23px
+}
+.arror-left
+{
+	width: auto;
+	quotes: "up"
+}
+.arror-right
+{
+	width: auto;
+	quotes: "next"
 }
