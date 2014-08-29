@@ -287,13 +287,12 @@
 						_count = +arr[0]
 						_index = 1
 					}
-					!!!"test";
-					_count = 12
-					_index = 1
 					if (_count > 0) {
 						_pref = this
 						_sref.refrw()
-						_sref.token(_index)
+						setTimeout(function(){
+							_sref.token(_index)
+						}, 100)
 					}
 				}
 			}
